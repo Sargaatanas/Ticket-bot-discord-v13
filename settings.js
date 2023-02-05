@@ -1,7 +1,7 @@
 module.exports = {
-    token: "", // Token du bot
-    ticketChannel: "", // Channel ou on peut créer les ticket
-    ticketRoles: [""], // ID des rôles qui peuvent voir les tickets
-    ticketCategory: "", // Catégorie des tickets
-    guildId: "", // ID du serveur
+    token: "", // Bot token
+    ticketChannel: "", // Channel to create the ticket
+    ticketRoles: [""], // Roles moderator
+    ticketCategory: "", // Tiket category
+    guildId: "", // Server ID
 };
