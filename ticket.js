@@ -1,5 +1,4 @@
-// Créer par BaalZephon#1533
-// discord.gg/rowsfield
+// Create by me ( Sargaatanas )
 
 const {
     Client,
@@ -31,14 +30,14 @@ module.exports = async(client) => {
 
                             let embed = new MessageEmbed()
                                 .setColor("BLURPLE")
-                                .setTitle(`RowsField - Support`)
-                                .setDescription(`> Ouvrez un ticket et précisez votre problème.`);
+                                .setTitle(`ServerName - Ticket`)
+                                .setDescription(`> Create a ticket and specify the problem.`);
 
                             let btnrow = new MessageActionRow().addComponents([
                                 new MessageButton()
                                 .setCustomId("ticket_create")
                                 .setStyle("SECONDARY")
-                                .setLabel(`Créer un ticket`)
+                                .setLabel(`Create ticket`)
                                 .setEmoji("🎟️"),
                             ]);
                             await ticketChannel.send({
@@ -47,7 +46,7 @@ module.exports = async(client) => {
                             });
 
                             interaction.reply({
-                                content: `Ticket mis dans ${ticketChannel}`,
+                                content: `Ticket in ${ticketChannel}`,
                             });
                         }
                     }
@@ -68,7 +67,7 @@ module.exports = async(client) => {
 
                             const user_reason = new TextInputComponent()
                                 .setCustomId("ticket_reason")
-                                .setLabel(`Décrivez votre demande`.substring(0, 45))
+                                .setLabel(`Specify the problem`.substring(0, 45))
                                 .setMinLength(1)
                                 .setMaxLength(100)
                                 .setRequired(true)
@@ -88,7 +87,7 @@ module.exports = async(client) => {
                             );
                             if (!oldChannel) return;
                             interaction.reply({
-                                content: `> Votre ticket sera supprimé dans 5 secondes.`,
+                                content: `> Your ticket delete in 5 seconds.`,
                             });
                             setTimeout(() => {
                                 oldChannel.delete().catch((e) => {});
@@ -106,7 +105,7 @@ module.exports = async(client) => {
                         await interaction.guild.channels
                             .create(ticketname, {
                                 type: "GUILD_TEXT",
-                                topic: `Ticket de ${interaction.user.tag}`,
+                                topic: `Ticket of ${interaction.user.tag}`,
                                 parent: settings.ticketCategory || interaction.channel.parentId,
                                 permissionOverwrites: [{
                                         id: interaction.guildId,
@@ -134,13 +133,13 @@ module.exports = async(client) => {
                             .then(async(ch) => {
                                     let embed = new MessageEmbed()
                                         .setColor("BLURPLE")
-                                        .setTitle(`Ticket de ${interaction.user.username}`)
+                                        .setTitle(`Ticket of ${interaction.user.username}`)
                                         .addFields([{
-                                                name: `Budget`,
+                                                name: `?`,
                                                 value: `> ${ticket_username}`,
                                             },
                                             {
-                                                name: `Demande`,
+                                                name: `?`,
                                                 value: `> ${ticket_user_reason}`,
                                             },
                                         ]);
@@ -159,13 +158,13 @@ module.exports = async(client) => {
               components: [btnrow],
             });
             interaction.reply({
-              content: `> Votre ticket et créer dans ${ch}`,
+              content: `> Your ticket are in ${ch}`,
               ephemeral: true,
             });
           })
           .catch((e) => {
             interaction.reply({
-              content: `Erreur \n \`${e.message}\``,
+              content: `Error \n \`${e.message}\``,
               ephemeral: true,
             });
           });
