@@ -1,5 +1,5 @@
-<h1>Ticket Bot Discord (V13</h1>
+<h1>Bot Discord (Ticket discord v13)</h1>
 
-<h1> Ceci est un bot de ticket seulement disponible à partir de la v13 , cela utilise le système "modals"</h1>
-Pour le paramètrer allez dans le setting.js.
-Le préfixe pour le mettre en place est : /setup
+<h1> Hoc robot tantum available e v13, utitur systemate modali</h1>
+Configurare eam ad settings.js.
+Praepositio ad eam est: /setup
