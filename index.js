@@ -1,5 +1,4 @@
-// Créer par BaalZephon#1533
-// discord.gg/rowsfield
+// Create by me
 
 const { Client } = require("discord.js");
 const { token, guildId } = require("./settings");
@@ -14,12 +13,12 @@ client.on("ready", async() => {
     if (guild) {
         await guild.commands.set([{
                 name: "ping",
-                description: `test le ping du bot`,
+                description: `Just a test`,
                 type: "CHAT_INPUT",
             },
             {
                 name: "setup",
-                description: `créer le support ticket`,
+                description: `Create a panel for ticket`,
                 type: "CHAT_INPUT",
             },
         ]);
